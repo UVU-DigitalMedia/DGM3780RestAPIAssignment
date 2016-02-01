@@ -1,9 +1,38 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+
 var port = 8000;
 
 // write the API here
 
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
+
+
+app.get('/api', function (req, res) {
+    res.send({
+        thoughts: 'welcome to my API!'
+    });
+});
+
+
+app.get('/api/data', function (req, res) {
+    res.json({
+        data: 'Some phoney stuff'
+    });
+});
+
+
+app.post('/api/data', function (req, res) {
+    console.log('Posting');
+    console.log(req.body.data);
+    var query = req.body.data;
+
+        res.json({query:query});
+});
 
 
 //////////////////////////////////////////
@@ -14,10 +43,10 @@ var port = 8000;
 module.exports = app;
 
 //spin up our app
-app.listen(port, function(err){
+app.listen(port, function (err) {
 
     //check to see if there is an err
-    if(err){
+    if (err) {
         //if there is, log it
         console.log(err);
     }
