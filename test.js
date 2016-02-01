@@ -7,7 +7,6 @@ describe('API - /api', function(){
     request(app)
       .get('/api')
       .set('Accept', 'application/json')
-      .expect('Content-Type', /json/)
       .expect(200)
       .end(function(err, res){
         if (err) return done(err);
@@ -20,7 +19,6 @@ describe('API - /api', function(){
             request(app)
             .get('/api/data')
             .set('Accept', 'application/json')
-            .expect('Content-Type', /json/)
             .expect(200)
             .end(function(err, res){
               if (err) return done(err);
@@ -32,7 +30,6 @@ describe('API - /api', function(){
         request(app)
           .get('/api/data')
           .set('Accept', 'application/json')
-          .expect('Content-Type', /json/)
           .expect(200)
           .end(function(err, res){
             if (err) return done(err);
@@ -47,7 +44,6 @@ describe('API - /api', function(){
             request(app)
             .post('/api/data')
             .set('Accept', 'application/json')
-            .expect('Content-Type', /json/)
             .expect(200)
             .end(function(err, res){
               if (err) return done(err);
@@ -68,4 +64,3 @@ describe('API - /api', function(){
     })
 
 });
-
