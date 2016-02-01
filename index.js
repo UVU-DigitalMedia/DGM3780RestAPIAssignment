@@ -1,9 +1,30 @@
 var express = require('express');
 var app = express();
 var port = 8000;
-
+var bodyParser = require('body-parser');
 // write the API here
 
+
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+app.get('/api', function (req, res){
+	res.send({thoughts:'Welcome to my API'});
+});
+
+app.get('/api/data', function (req, res){
+	console.log("Hey");
+	res.json({data: 'some fake data'});
+});
+
+app.post('/api/data', function (req, res){
+	console.log(req.body);
+	console.log(req.body.data);
+	var query = (req.body.data);
+
+	res.json({query:query});
+
+});
 
 
 //////////////////////////////////////////
