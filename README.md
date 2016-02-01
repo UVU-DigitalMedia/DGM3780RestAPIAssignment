@@ -1,4 +1,4 @@
-# REST API Assign [![Build Status](https://travis-ci.org/landonconover/RESTAPIAssign.svg?branch=master)](https://travis-ci.org/landonconover/RESTAPIAssign)
+# REST API Assign [![Build Status](https://travis-ci.org/UVU-DigitalMedia/DGM3780RestAPIAssignment.svg?branch=master)](https://travis-ci.org/UVU-DigitalMedia/DGM3780RestAPIAssignment)
 In this assignment we will be writing a simple REST API. Both GET and POST methods will be used
 
 #Steps
