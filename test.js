@@ -19,7 +19,6 @@ describe('API - /api', function(){
             request(app)
             .get('/api/data')
             .set('Accept', 'application/json')
-            .expect()
             .expect(200)
             .end(function(err, res){
               if (err) return done(err);
