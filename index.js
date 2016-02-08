@@ -9,9 +9,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/api', function(req, res) {
-	//res.set('Content-Type', /json/);
-	//res.sent({thoughts: 'First Test'}
-	res.send('Welcome to my API!');
+	res.set('Content-Type', /json/);
+	
+    res.json({data:"Welcome to my API"});
 }) 
 
 app.get('/api/data', function(req , res) {
@@ -29,8 +29,8 @@ app.post('/api/data', function(req, res) {
 })
 
 app.get('/api/awesome', function(req, res) {
-	//res.set('Content-Type', /json/);
-	//res.sent({thoughts: 'First Test'}
+	res.set('Content-Type', /json/);
+	res.sent({thoughts: 'First Test'})
 	res.send('Welcome to my API!');
 }) 
 
