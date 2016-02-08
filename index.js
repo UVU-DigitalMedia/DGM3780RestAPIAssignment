@@ -17,7 +17,7 @@ app.get('/api/data', function(req, res){
   res.json({data: 'this is fake data'});
 });
 
-app.post('api/data', function(req, res){
+app.post('/api/data', function(req, res){
   console.log(req.body);
   console.log(req.body.data);
 
