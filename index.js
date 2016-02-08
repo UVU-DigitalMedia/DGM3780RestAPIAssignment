@@ -29,8 +29,10 @@ app.post('/api/data', function(req, res) {
 })
 
 app.get('/api/awesome', function(req, res) {
+
 	res.set('Content-Type', /json/);
 	res.sent({thoughts: 'First Test'})
+
 	res.send('Welcome to my API!');
 }) 
 
