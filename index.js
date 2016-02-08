@@ -9,7 +9,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/api', function(req, res) {
-	res.set('Content-Type', /json/);
 	
     res.json({data:"Welcome to my API"});
 }) 
