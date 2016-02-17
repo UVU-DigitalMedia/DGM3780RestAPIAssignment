@@ -3,7 +3,7 @@ var app = express();
 var port = 8000;
 
 // write the API here
-var bodyParser = require('bodyParser');
+var bodyParser = require('body-Parser');
 
 
 
@@ -15,11 +15,13 @@ app.get('/api', function(req, res){
 });
 
 
-app.get('api/data', function(req, res);
+app.get('/api/data', function(req, res){
 	res.json( {data: 'ThisIsTheQuery'});
+})
 	
-app.post('/api/data', function(req, res)
-		res.send( {"query" : "QueryGoesHere"}))
+app.post('/api/data', function(req, res){
+		 
+		res.json( {query : "QueryGoesHere"})
 })
 
 
