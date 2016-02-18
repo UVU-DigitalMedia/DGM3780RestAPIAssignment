@@ -20,8 +20,8 @@ app.get('/api/data', function(req, res){
 });
 	
 app.post('/api/data', function(req, res){
-		 
-		res.json( {query : 'QueryGoesHere'})
+	    
+		res.json( {query : 'ThisIsTheQuery'})
 });
 
 
