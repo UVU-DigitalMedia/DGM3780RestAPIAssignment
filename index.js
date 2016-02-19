@@ -21,6 +21,7 @@ app.get('/api/data', function(req, res){
 	
 app.post('/api/data', function(req, res){
 	    var query = req.params.query;
+		req.query = data;
 		res.json( {query : 'ThisIsTheQuery'})
 });
 
