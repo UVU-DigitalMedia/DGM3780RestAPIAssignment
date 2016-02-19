@@ -20,7 +20,7 @@ app.get('/api/data', function(req, res){
 });
 	
 app.post('/api/data', function(req, res){
-	    
+	    var query = req.params.query;
 		res.json( {query : 'ThisIsTheQuery'})
 });
 
